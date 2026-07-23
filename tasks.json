@@ -1,0 +1,49 @@
+[
+  {
+    "id": 1,
+    "text": "Договор выкупа авто",
+    "cat": "Банкротство",
+    "executor": "Антон",
+    "type": "once",
+    "weekdays": [],
+    "date": "2026-07-21",
+    "until": null,
+    "time": "06:00",
+    "cancelled": [],
+    "done_dates": []
+  },
+  {
+    "id": 2,
+    "text": "Обучение перемещению через ИИ",
+    "cat": "WB",
+    "executor": "Лена",
+    "type": "recurring",
+    "weekdays": [
+      0,
+      2
+    ],
+    "date": null,
+    "until": "2026-07-21",
+    "time": "10:00",
+    "cancelled": [],
+    "done_dates": []
+  },
+  {
+    "id": 3,
+    "text": "пробная",
+    "cat": "Дом",
+    "executor": "Антон",
+    "type": "recurring",
+    "weekdays": [
+      3,
+      4
+    ],
+    "date": null,
+    "until": "2026-07-22",
+    "time": "09:00",
+    "cancelled": [
+      "2026-07-24"
+    ],
+    "done_dates": []
+  }
+]
