@@ -2,8 +2,20 @@ import json
 import os
 import datetime
 from flask import Flask, request, redirect
+from flask import Response
+from dotenv import load_dotenv
 
 app = Flask(__name__)
+load_dotenv()
+USER = os.getenv("APP_USER", "anton")
+PASSWORD = os.getenv("APP_PASS", "")
+
+@app.before_request
+def require_auth():
+    auth = request.authorization
+    if not auth or auth.username != USER or auth.password != PASSWORD:
+        return Response("Нужен вход", 401,
+                        {"WWW-Authenticate": 'Basic realm="Bogatyr"'})
 DATA_FILE = "tasks.json"
 META_FILE = "meta.json"   # тут храним списки категорий и исполнителей
 
